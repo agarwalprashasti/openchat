@@ -1,6 +1,7 @@
 <?php
 
 require_once (__DIR__.'/vendor/autoload.php');
+
 use ChatApp\Session;
 use Dotenv\Dotenv;
 $dotenv = new Dotenv(__DIR__);
@@ -15,17 +16,25 @@ if (Session::get('start') != null) {
   <html>
 
   <head>
-    <title>Open Chat</title>
+  <div class="text-center">
+    <h1 class="text -center "> OPEN CHAT </h1>
+    <img src="https://github.com/ankitjain28may/openchat/blob/master/public/assests/img/icon.png?raw=true" width="80" height="80">
+    </div>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="public/assests/js/jquery-3.0.0.min.js"></script>
     <link rel="stylesheet" href="public/assests/css/bootstrap.min.css">
-     <link rel="manifest" href="manifest.json" />
-    <script src="https://cdn.rawgit.com/GoogleChrome/pwacompat/v1.0.3/pwacompat.min.js"></script>
-    <meta name="theme-color" content="black" />
+  
+
     <!-- Latest compiled JavaScript -->
     <script src="public/assests/js/bootstrap.min.js"></script>
     <style type="text/css">
+body
+{background-image:url('https://mfiles.alphacoders.com/620/620054.jpg');
+
+  background-size:100%;
+
+}
       .navbar {
                 border-radius: 0;
               }
@@ -35,13 +44,54 @@ if (Session::get('start') != null) {
             input {
               border-radius: 0px;
             }
+
+       h1
+       {
+        font-family:Comic Sans MS;
+  color:orange;
+  font-style:bold;
+  font-size:50px;
+  padding-up:20px;
+  color:white;
+       }    
+       .container
+       {
+        width:500px;
+        height:450px;
+        margin-top:30px;
+        margin-left:50px;
+        background:rgba(255,255,255,0.3);
+        border-radius:15px;
+        margin-right:auto;
+        margin-left:auto;
+
+       } 
+       #wrapper {
+zoom: 1;
+filter: alpha(opacity=90);
+opacity: 0.9;
+}
+
+#content {
+background-color: transparent;
+}
+#content {
+background-color: transparent!important;
+}
+h2
+{
+  color:white;
+  font-style:bold;
+}
+
     </style>
   </head>
 
   <body>
+   
     <!-- Navbar -->
     <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
+      <div class=-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -62,39 +112,44 @@ if (Session::get('start') != null) {
       </div>
     </nav>
 
-    <!-- Main Body -->
-    <div class="container"><br><br>
+    <!-- Main Body --
+    <div class="><br><br>
       <div class="row">
 
       <!-- Login -->
         <div class="col-sm-4 col-sm-offset-1">
           <div class="row">
             <div class="col-sm-12 text-center">
-              <h2 class="heading">Login</h2>
+              <h2 class="heading" >LOGIN</h2>
             </div>
             <hr>
           </div>
           <form>
+          <div class="container">
             <div class="form-group">
-              <label for="login" id="loginLabel">Email or Username</label>
-              <input type="text" name="login" id="login" class="form-control" placeholder="Email or Username">
+              <label for="login" id="loginLabel" class="large">Email or Username</label>
+              <input type="text" name="login" id="login" class="form-control login login-submit" placeholder="Email or Username">
             </div>
             <div class="form-group">
               <label for="passLogin" id="passLabelLogin">Password</label>
               <input type="password" name="passLogin" id="passLogin" class="form-control" placeholder="Password">
+              </br>
+              <a href="#">Forgot Password</a>
             </div>
             <button type="button" class="btn btn-success" onclick="loginCheck()" value="Login">Submit</button>
           </form>
+        </div>
         </div>
 
         <!-- Register -->
         <div class="col-sm-4 col-sm-offset-2">
           <div class="row">
             <div class="col-sm-12 text-center">
-              <h2>Register</h2>
+              <h2 color="white">REGISTER</h2>
             </div>
             <hr>
           </div>
+          <div class="container">
           <form>
             <div class="form-group">
               <label for="name" id="nameLabel">Your Name</label>
@@ -121,6 +176,7 @@ if (Session::get('start') != null) {
         </div>
       </div>
       <br><br><br>
+    </div>
     </div>
 
     <!-- Scripts -->
